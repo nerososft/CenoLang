@@ -405,7 +405,10 @@ namespace CenoLang {
      * | '{'           '}'
      * ;
      */
-    void CPraser::compound_stat();
+    void CPraser::compound_stat(){
+        match('{');
+        // todo
+    }
 
     /**
      *  stat_list       : stat
