@@ -6,6 +6,8 @@
 #include "../../include/lexer/Num.h"
 #include "../../include/lexer/Real.h"
 #include "../../include/symbol/Type.h"
+#include "../../include/symbol/StorageClass.h"
+#include "../../include/symbol/TypeQualifier.h"
 
 #include <vector>
 #include <iostream>
@@ -26,17 +28,26 @@ namespace  CenoLang {
         reserve(Keywords::ELSE); // else
         reserve(Keywords::BREAK); // break
 
-        reserve(Keywords::AUTO); // auto
-        reserve(Keywords::REGISTER); // register
-        reserve(Keywords::STATIC); // static
-        reserve(Keywords::EXTERN); // extern
-        reserve(Keywords::TYPEDEF); // typedef
-
-
         reserve(Types::BOOLEAN); // double
         reserve(Types::CHAR); // char
         reserve(Types::FLOAT); // float
-        reserve(Types::INT); // int
+        reserve(Types::VOID); // void
+        reserve(Types::SHORT); //short
+        reserve(Types::DOUBLE); // double
+        reserve(Types::LONG); // long
+        reserve(Types::UNSIGNED); // unsigned
+        reserve(Types::SIGNED); // signed
+
+        reserve(StorageClasses::AUTO); // auto
+        reserve(StorageClasses::REGISTER); // register
+        reserve(StorageClasses::STATIC); // static
+        reserve(StorageClasses::EXTERN); // extern
+        reserve(StorageClasses::TYPEDEF); // typedef
+
+        reserve(TypeQualifiers::CONST); // consts
+        reserve(TypeQualifiers::VOLATILE); // volatile
+
+
 
     }
 

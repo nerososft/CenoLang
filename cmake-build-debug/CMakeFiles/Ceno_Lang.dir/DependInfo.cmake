@@ -4,10 +4,11 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/Users/neroyang/project/Ceno-Lang/include/symbol/TypeQualifier.cpp" "/Users/neroyang/project/Ceno-Lang/cmake-build-debug/CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.o"
   "/Users/neroyang/project/Ceno-Lang/src/clcompiler/CenoLangCompiler.cpp" "/Users/neroyang/project/Ceno-Lang/cmake-build-debug/CMakeFiles/Ceno_Lang.dir/src/clcompiler/CenoLangCompiler.cpp.o"
   "/Users/neroyang/project/Ceno-Lang/src/lexer/Lexer.cpp" "/Users/neroyang/project/Ceno-Lang/cmake-build-debug/CMakeFiles/Ceno_Lang.dir/src/lexer/Lexer.cpp.o"
   "/Users/neroyang/project/Ceno-Lang/src/main.cpp" "/Users/neroyang/project/Ceno-Lang/cmake-build-debug/CMakeFiles/Ceno_Lang.dir/src/main.cpp.o"
-  "/Users/neroyang/project/Ceno-Lang/src/praser/NewPraser.cpp" "/Users/neroyang/project/Ceno-Lang/cmake-build-debug/CMakeFiles/Ceno_Lang.dir/src/praser/NewPraser.cpp.o"
+  "/Users/neroyang/project/Ceno-Lang/src/praser/CPraser.cpp" "/Users/neroyang/project/Ceno-Lang/cmake-build-debug/CMakeFiles/Ceno_Lang.dir/src/praser/CPraser.cpp.o"
   "/Users/neroyang/project/Ceno-Lang/src/praser/Praser.cpp" "/Users/neroyang/project/Ceno-Lang/cmake-build-debug/CMakeFiles/Ceno_Lang.dir/src/praser/Praser.cpp.o"
   "/Users/neroyang/project/Ceno-Lang/src/symbol/Array.cpp" "/Users/neroyang/project/Ceno-Lang/cmake-build-debug/CMakeFiles/Ceno_Lang.dir/src/symbol/Array.cpp.o"
   "/Users/neroyang/project/Ceno-Lang/src/symbol/Type.cpp" "/Users/neroyang/project/Ceno-Lang/cmake-build-debug/CMakeFiles/Ceno_Lang.dir/src/symbol/Type.cpp.o"

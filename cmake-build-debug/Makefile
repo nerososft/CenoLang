@@ -123,6 +123,33 @@ Ceno_Lang/fast:
 	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/build
 .PHONY : Ceno_Lang/fast
 
+include/symbol/TypeQualifier.o: include/symbol/TypeQualifier.cpp.o
+
+.PHONY : include/symbol/TypeQualifier.o
+
+# target to build an object file
+include/symbol/TypeQualifier.cpp.o:
+	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.o
+.PHONY : include/symbol/TypeQualifier.cpp.o
+
+include/symbol/TypeQualifier.i: include/symbol/TypeQualifier.cpp.i
+
+.PHONY : include/symbol/TypeQualifier.i
+
+# target to preprocess a source file
+include/symbol/TypeQualifier.cpp.i:
+	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.i
+.PHONY : include/symbol/TypeQualifier.cpp.i
+
+include/symbol/TypeQualifier.s: include/symbol/TypeQualifier.cpp.s
+
+.PHONY : include/symbol/TypeQualifier.s
+
+# target to generate assembly for a file
+include/symbol/TypeQualifier.cpp.s:
+	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.s
+.PHONY : include/symbol/TypeQualifier.cpp.s
+
 src/clcompiler/CenoLangCompiler.o: src/clcompiler/CenoLangCompiler.cpp.o
 
 .PHONY : src/clcompiler/CenoLangCompiler.o
@@ -204,32 +231,32 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/praser/NewPraser.o: src/praser/NewPraser.cpp.o
+src/praser/CPraser.o: src/praser/CPraser.cpp.o
 
-.PHONY : src/praser/NewPraser.o
+.PHONY : src/praser/CPraser.o
 
 # target to build an object file
-src/praser/NewPraser.cpp.o:
-	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/src/praser/NewPraser.cpp.o
-.PHONY : src/praser/NewPraser.cpp.o
+src/praser/CPraser.cpp.o:
+	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/src/praser/CPraser.cpp.o
+.PHONY : src/praser/CPraser.cpp.o
 
-src/praser/NewPraser.i: src/praser/NewPraser.cpp.i
+src/praser/CPraser.i: src/praser/CPraser.cpp.i
 
-.PHONY : src/praser/NewPraser.i
+.PHONY : src/praser/CPraser.i
 
 # target to preprocess a source file
-src/praser/NewPraser.cpp.i:
-	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/src/praser/NewPraser.cpp.i
-.PHONY : src/praser/NewPraser.cpp.i
+src/praser/CPraser.cpp.i:
+	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/src/praser/CPraser.cpp.i
+.PHONY : src/praser/CPraser.cpp.i
 
-src/praser/NewPraser.s: src/praser/NewPraser.cpp.s
+src/praser/CPraser.s: src/praser/CPraser.cpp.s
 
-.PHONY : src/praser/NewPraser.s
+.PHONY : src/praser/CPraser.s
 
 # target to generate assembly for a file
-src/praser/NewPraser.cpp.s:
-	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/src/praser/NewPraser.cpp.s
-.PHONY : src/praser/NewPraser.cpp.s
+src/praser/CPraser.cpp.s:
+	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/src/praser/CPraser.cpp.s
+.PHONY : src/praser/CPraser.cpp.s
 
 src/praser/Praser.o: src/praser/Praser.cpp.o
 
@@ -321,6 +348,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Ceno_Lang"
+	@echo "... include/symbol/TypeQualifier.o"
+	@echo "... include/symbol/TypeQualifier.i"
+	@echo "... include/symbol/TypeQualifier.s"
 	@echo "... src/clcompiler/CenoLangCompiler.o"
 	@echo "... src/clcompiler/CenoLangCompiler.i"
 	@echo "... src/clcompiler/CenoLangCompiler.s"
@@ -330,9 +360,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/praser/NewPraser.o"
-	@echo "... src/praser/NewPraser.i"
-	@echo "... src/praser/NewPraser.s"
+	@echo "... src/praser/CPraser.o"
+	@echo "... src/praser/CPraser.i"
+	@echo "... src/praser/CPraser.s"
 	@echo "... src/praser/Praser.o"
 	@echo "... src/praser/Praser.i"
 	@echo "... src/praser/Praser.s"

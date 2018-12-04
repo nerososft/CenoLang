@@ -32,19 +32,15 @@ namespace CenoLang {
 
         static const int ID      = 15;
 
-        static const int BASIC_TYPE      = 16;
+        static const int BASIC_TYPE      = 16; // 'void' | 'char' | 'short' | 'int' | 'long' | 'float' | 'double' | 'signed' | 'unsigned'
         static const int ARRAY_TYPE      = 17;
 
         static const int CONTINUE = 18;
         static const int RETURN = 19;
 
-        static const int REGISTER = 20;
-        static const int STATIC = 21;
-        static const int EXTERN = 22;
-        static const int TYPEDEF = 23;
-        static const int  AUTO = 24;
+        static const int STORAGE_TYPE = 20; // 'auto' | 'register' | 'static' | 'extern' | 'typedef'
 
-
+        static const int TYPE_QUALIFIER = 21; // const | volatile
 
     };
 }

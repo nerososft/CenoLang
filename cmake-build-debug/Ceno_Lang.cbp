@@ -103,7 +103,7 @@
 		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/lexer/Token.h">
 			<Option target="Ceno_Lang"/>
 		</Unit>
-		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/praser/NewPraser.h">
+		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/praser/CPraser.h">
 			<Option target="Ceno_Lang"/>
 		</Unit>
 		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/praser/Praser.h">
@@ -112,7 +112,16 @@
 		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/symbol/Array.h">
 			<Option target="Ceno_Lang"/>
 		</Unit>
+		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/symbol/StorageClass.h">
+			<Option target="Ceno_Lang"/>
+		</Unit>
 		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/symbol/Type.h">
+			<Option target="Ceno_Lang"/>
+		</Unit>
+		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/symbol/TypeQualifier.cpp">
+			<Option target="Ceno_Lang"/>
+		</Unit>
+		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/symbol/TypeQualifier.h">
 			<Option target="Ceno_Lang"/>
 		</Unit>
 		<Unit filename="/Users/neroyang/project/Ceno-Lang/src/clcompiler/CenoLangCompiler.cpp">
@@ -124,7 +133,7 @@
 		<Unit filename="/Users/neroyang/project/Ceno-Lang/src/main.cpp">
 			<Option target="Ceno_Lang"/>
 		</Unit>
-		<Unit filename="/Users/neroyang/project/Ceno-Lang/src/praser/NewPraser.cpp">
+		<Unit filename="/Users/neroyang/project/Ceno-Lang/src/praser/CPraser.cpp">
 			<Option target="Ceno_Lang"/>
 		</Unit>
 		<Unit filename="/Users/neroyang/project/Ceno-Lang/src/praser/Praser.cpp">

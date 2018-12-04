@@ -5,7 +5,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Ceno_Lang.dir/src/symbol/Type.cpp.o"
   "CMakeFiles/Ceno_Lang.dir/src/symbol/Array.cpp.o"
   "CMakeFiles/Ceno_Lang.dir/src/praser/Praser.cpp.o"
-  "CMakeFiles/Ceno_Lang.dir/src/praser/NewPraser.cpp.o"
+  "CMakeFiles/Ceno_Lang.dir/src/praser/CPraser.cpp.o"
+  "CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.o"
   "Ceno_Lang.pdb"
   "Ceno_Lang"
 )

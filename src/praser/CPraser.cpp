@@ -91,7 +91,11 @@ namespace CenoLang {
      * storage_class_spec  : 'auto' | 'register' | 'static' | 'extern' | 'typedef'
      * ;
      */
-    void CPraser::storage_class_spec();
+    void CPraser::storage_class_spec(){
+        if(look->tag==Tag::STORAGE_TYPE){
+            match(Tag::STORAGE_TYPE); // auto' | 'register' | 'static' | 'extern' | 'typedef'
+        }
+    }
 
     /**
      *  type_spec       : 'void' | 'char' | 'short' | 'int' | 'long' | 'float'
@@ -101,13 +105,23 @@ namespace CenoLang {
      *                 | typedef_name
      * ;
      */
-    void CPraser::type_spec();
+    void CPraser::type_spec(){
+        if(look->tag==Tag::BASIC_TYPE){
+            match(Tag::BASIC_TYPE);
+        }
+        // todo
+    }
 
     /**
      * type_qualifier      : 'const' | 'volatile'
      * ;
      */
-    void CPraser::type_qualifier();
+    void CPraser::type_qualifier(){
+        if(look->tag==Tag::TYPE_QUALIFIER){
+            match(Tag::TYPE_QUALIFIER);
+        }
+        // todo
+    }
 
     /**
      * struct_or_union_spec    : struct_or_union id '{' struct_decl_list '}'
