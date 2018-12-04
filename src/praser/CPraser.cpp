@@ -369,7 +369,23 @@ namespace CenoLang {
      * |   ';'
      * ;
      */
-    void CPraser::labeled_stat();
+    void CPraser::labeled_stat(){
+        switch (look->tag){
+            case Tag::ID: // id ':' stat
+                match(Tag::ID);
+                match(':');
+                stat();
+            case Tag::CASE: // 'case' const_exp ':' stat
+                match(Tag::CASE);
+                const_exp();
+                match(':');
+                stat();
+            case Tag::DEFAULT: // 'default' ':' stat
+                match(Tag::DEFAULT);
+                match(':');
+                stat();
+        }
+    }
 
     /**
      * compound_stat       : '{' decl_list stat_list '}'

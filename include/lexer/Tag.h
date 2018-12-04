@@ -49,6 +49,11 @@ namespace CenoLang {
         static const int FOR = 24; // for
         static const int SWITCH = 25; // switch
 
+        static const int CASE = 26; // case
+        static const int DEFAULT = 27; // default
+
+
+
     };
 }
 

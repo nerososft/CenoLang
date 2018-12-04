@@ -34,6 +34,9 @@ namespace CenoLang {
         static Keyword *IF = new Keyword("if", Tag::IF);
         static Keyword *ELSE = new Keyword("else", Tag::ELSE);
         static Keyword *SWITCH = new Keyword("switch", Tag::SWITCH);
+        static Keyword *CASE = new Keyword("case", Tag::CASE);
+        static Keyword *DEFAULT = new Keyword("default", Tag::DEFAULT);
+
 
 
         static Keyword *DO = new Keyword("do", Tag::DO);
