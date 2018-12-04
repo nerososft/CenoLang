@@ -57,14 +57,14 @@ namespace CenoLang {
         std::cout << "translation_unit (" << look->tag << ")"<< std::endl;
 #endif
 
-        do {
+       // do {
             external_decl();
-        }while(look->tag!=Tag::TYPE_QUALIFIER
-               && look->tag!=Tag::BASIC_TYPE
-               && look->tag!=Tag::STORAGE_TYPE
-               && look->tag!='*'
-               && look->tag!='('
-               && look->tag!=Tag::ID);
+       // }while(look->tag!=Tag::TYPE_QUALIFIER
+       //       && look->tag!=Tag::BASIC_TYPE
+       //       && look->tag!=Tag::STORAGE_TYPE
+       //       && look->tag!='*'
+       //       && look->tag!='('
+       //       && look->tag!=Tag::ID);
     }
 
 
@@ -78,6 +78,8 @@ namespace CenoLang {
 #if defined(_DEBUG_PRASER)
         std::cout << "external_decl (" << look->tag << ")"<< std::endl;
 #endif
+
+
         function_definition();
     }
 
@@ -85,7 +87,7 @@ namespace CenoLang {
     /**
      * function_definition : decl_specs declarator decl_list compound_stat
      * |       declarator decl_list compound_stat
-     * | decl_specs declarator     compound_stat
+     * |        decl_specs declarator     compound_stat
      * |       declarator  compound_stat
      * ;
      */
@@ -94,6 +96,22 @@ namespace CenoLang {
 #if defined(_DEBUG_PRASER)
         std::cout << "function_definition (" << look->tag << ")"<< std::endl;
 #endif
+        if(look->tag==Tag::BASIC_TYPE||look->tag==Tag::TYPE_QUALIFIER||look->tag==Tag::STORAGE_TYPE){ // decl_specs
+            decl_specs();
+            if(look->tag==Tag::ID || look->tag=='(' || look->tag=='*') { // // declarator
+                declarator();
+            }
+
+            if(look->tag==Tag::BASIC_TYPE||look->tag==Tag::TYPE_QUALIFIER||look->tag==Tag::STORAGE_TYPE) {
+                decl_list();
+            }
+            compound_stat();
+        }else if(look->tag==Tag::ID || look->tag=='(' || look->tag=='*'){ // // declarator
+            if(look->tag==Tag::BASIC_TYPE||look->tag==Tag::TYPE_QUALIFIER||look->tag==Tag::STORAGE_TYPE) {
+                decl_list();
+            }
+            compound_stat();
+        }
 
     }
 
@@ -133,8 +151,12 @@ namespace CenoLang {
      * | type_qualifier
      * ;
      */
+    // const int const int
     void CPraser::decl_specs(){
-        do{
+#if defined(_DEBUG_PRASER)
+        std::cout << "decl_specs (" << look->tag << ")"<< std::endl;
+#endif
+        while(look->tag==Tag::STORAGE_TYPE || look->tag==Tag::BASIC_TYPE || look->tag==Tag::TYPE_QUALIFIER){
             switch (look->tag){
                 case Tag::STORAGE_TYPE:
                     match(Tag::STORAGE_TYPE);
@@ -143,7 +165,7 @@ namespace CenoLang {
                 case Tag::TYPE_QUALIFIER:
                     match(Tag::TYPE_QUALIFIER);
             }
-        }while (look->tag==Tag::STORAGE_TYPE||look->tag==Tag::BASIC_TYPE||look->tag==Tag::TYPE_QUALIFIER);
+        }
 
     }
 
@@ -234,10 +256,13 @@ namespace CenoLang {
      * ;
      */
     void CPraser::init_declarator_list(){
-        do{
-            init_declarator();
-        }while(look->tag==','); // init_declarator_list ',' init_declarator
         init_declarator(); // init_declarator
+
+        while(look->tag==','){ // init_declarator_list ',' init_declarator
+            match(',');
+            init_declarator();
+        }
+
     }
 
     /**
@@ -366,6 +391,11 @@ namespace CenoLang {
      * ;
      */
     void CPraser::declarator(){
+
+#if defined(_DEBUG_PRASER)
+        std::cout << "declarator (" << look->tag << ")"<< std::endl;
+#endif
+
         if(look->tag=='*'){ // pointer direct_declarator
             pointer();
             direct_declarator();
@@ -385,26 +415,46 @@ namespace CenoLang {
      * ;
      */
     void CPraser::direct_declarator(){
-        do{
-            direct_declarator();
-            switch (look->tag){
-                case '[':
-                    match('[');
-                    if(look->tag==Tag::NUM || look->tag==Tag::REAL){ // todo : CONSTANT
-                        const_exp();
-                    }
-                    match(']');
-                case '(':
-                    match('(');
-                    if(look->tag==Tag::ID){ // direct_declarator '(' id_list ')'
-                        id_list();
-                    }
-                    if(look->tag==Tag::BASIC_TYPE || look->tag==Tag::STORAGE_TYPE||look->tag==Tag::TYPE_QUALIFIER){ // direct_declarator '(' param_type_list ')'
-                        param_type_list();
-                    }
+
+#if defined(_DEBUG_PRASER)
+        std::cout << "direct_declarator (" << look->tag << ")"<< std::endl;
+#endif
+
+        if(look->tag==Tag::ID){
+            match(Tag::ID);
+        }
+
+        if(look->tag=='('){
+            match('(');
+            declarator();
+            match(')');
+            while(look->tag=='('){
+                if(look->tag==')'){
+                    match(')'); // direct_declarator '('     ')'
+                }
+                if(look->tag==Tag::ID){ // direct_declarator '(' id_list ')'
+                    id_list();
                     match(')');
+                }
+                if(look->tag==Tag::BASIC_TYPE ||  look->tag==Tag::TYPE_QUALIFIER || look->tag==Tag::STORAGE_TYPE){ // direct_declarator '(' param_type_list ')'
+                    param_type_list();
+                    match(')');
+                }
             }
-        }while(look->tag!=Tag::ID || look->tag!='(');
+        }
+
+        if(look->tag=='['){
+            if(look->tag==']'){
+                match(']'); // direct_declarator '['     ']'
+            }
+            if(look->tag==Tag::NUM || look->tag==Tag::REAL){ // direct_declarator '[' const_exp ']' // todo : CONSTANT
+                const_exp();
+                match(']');
+            }
+
+        }
+
+
     }
 
     /**
@@ -655,6 +705,11 @@ namespace CenoLang {
      * ;
      */
     void CPraser::compound_stat(){
+
+#if defined(_DEBUG_PRASER)
+        std::cout << "compound_stat (" << look->tag << ")"<< std::endl;
+#endif
+
         match('{');
         if(look->tag==Tag::BASIC_TYPE||look->tag==Tag::STORAGE_TYPE||look->tag==Tag::TYPE_QUALIFIER){
             decl_list();
