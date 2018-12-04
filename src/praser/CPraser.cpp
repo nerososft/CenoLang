@@ -620,7 +620,39 @@ namespace CenoLang {
      */
     void CPraser::compound_stat(){
         match('{');
-        // todo
+        if(look->tag==Tag::BASIC_TYPE||look->tag==Tag::STORAGE_TYPE||look->tag==Tag::TYPE_QUALIFIER){
+            decl_list();
+            if(look->tag==Tag::WHILE
+               ||look->tag==Tag::DO
+               ||look->tag==Tag::FOR
+               ||look->tag==Tag::GOTO
+               ||look->tag==Tag::BREAK
+               ||look->tag==Tag::CONTINUE
+               ||look->tag==Tag::RETURN
+               ||look->tag==Tag::CASE
+               ||look->tag==Tag::DEFAULT
+               ||look->tag==';'
+               ||look->tag==Tag::ID) { // '{' decl_list stat_list '}'
+                stat_list();
+            }else if(look->tag=='}'){ // '{' decl_list     '}'
+                match('}');
+            }
+        }else if(look->tag==Tag::WHILE
+                 ||look->tag==Tag::DO
+                 ||look->tag==Tag::FOR
+                 ||look->tag==Tag::GOTO
+                 ||look->tag==Tag::BREAK
+                 ||look->tag==Tag::CONTINUE
+                 ||look->tag==Tag::RETURN
+                 ||look->tag==Tag::CASE
+                 ||look->tag==Tag::DEFAULT
+                 ||look->tag==';'
+                 ||look->tag==Tag::ID){ //'{'       stat_list '}'
+            stat_list();
+        }else if(look->tag=='}'){ // '{'           '}'
+            match('}');
+        }
+
     }
 
     /**
@@ -628,7 +660,21 @@ namespace CenoLang {
      * | stat_list stat
      * ;
      */
-    void CPraser::stat_list();
+    void CPraser::stat_list(){
+        do{
+            stat();
+        }while(look->tag!=Tag::WHILE
+               && look->tag!=Tag::DO
+               && look->tag!=Tag::FOR
+               && look->tag!=Tag::GOTO
+               && look->tag!=Tag::BREAK
+               && look->tag!=Tag::CONTINUE
+               && look->tag!=Tag::RETURN
+               && look->tag!=Tag::CASE
+               && look->tag!=Tag::DEFAULT
+               && look->tag!=';'
+               && look->tag!=Tag::ID);
+    }
 
     /**
      * selection_stat      : 'if' '(' exp ')' stat
@@ -780,14 +826,22 @@ namespace CenoLang {
      * | exp ',' assignment_exp
      * ;
      */
-    void CPraser::exp();
+    void CPraser::exp(){
+        assignment_exp();
+        while(look->tag==','){
+            match(',');
+            assignment_exp();
+        }
+    }
 
     /**
      *  assignment_exp      : conditional_exp
      * | unary_exp assignment_operator assignment_exp
      * ;
      */
-    void CPraser::assignment_exp();
+    void CPraser::assignment_exp(){
+
+    }
 
 
     /**
