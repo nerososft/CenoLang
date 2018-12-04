@@ -33,9 +33,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="437d38f2-d8a5-403f-8550-226ad932ecb7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/lexer/Keyword.h" afterPath="$PROJECT_DIR$/include/lexer/Keyword.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/lexer/Tag.h" afterPath="$PROJECT_DIR$/include/lexer/Tag.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/praser/CPraser.h" afterPath="$PROJECT_DIR$/include/praser/CPraser.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/praser/CPraser.cpp" afterPath="$PROJECT_DIR$/src/praser/CPraser.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -68,21 +66,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Type.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/include/symbol/Type.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="28" column="29" lean-forward="false" selection-start-line="28" selection-start-column="20" selection-end-line="28" selection-end-column="29" />
-              <caret line="29" column="29" lean-forward="false" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="29" />
-              <caret line="30" column="29" lean-forward="false" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="29" />
-              <caret line="31" column="29" lean-forward="false" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="29" />
-              <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="29" />
-              <caret line="34" column="29" lean-forward="false" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="StorageClass.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/symbol/StorageClass.h">
           <provider selected="true" editor-type-id="text-editor">
@@ -96,11 +79,21 @@
       <file leaf-file-name="CPraser.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/praser/CPraser.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="382" column="52" lean-forward="false" selection-start-line="382" selection-start-column="52" selection-end-line="382" selection-end-column="52" />
+            <state relative-caret-position="309">
+              <caret line="394" column="25" lean-forward="true" selection-start-line="394" selection-start-column="25" selection-end-line="394" selection-end-column="25" />
               <folding>
                 <element signature="e#44#63#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CPraser.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/include/praser/CPraser.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="398">
+              <caret line="324" column="24" lean-forward="true" selection-start-line="324" selection-start-column="24" selection-end-line="324" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -162,6 +155,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>storage_class</find>
+      <find>exp_stat</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -200,7 +194,6 @@
         <option value="$PROJECT_DIR$/src/main.cpp" />
         <option value="$PROJECT_DIR$/include/praser/NewPraser.h" />
         <option value="$PROJECT_DIR$/src/praser/NewPraser.cpp" />
-        <option value="$PROJECT_DIR$/include/praser/CPraser.h" />
         <option value="$PROJECT_DIR$/include/symbol/StorageClass.h" />
         <option value="$PROJECT_DIR$/include/symbol/Type.h" />
         <option value="$PROJECT_DIR$/include/symbol/StructUnion.h" />
@@ -209,6 +202,7 @@
         <option value="$PROJECT_DIR$/src/lexer/Lexer.cpp" />
         <option value="$PROJECT_DIR$/include/lexer/Keyword.h" />
         <option value="$PROJECT_DIR$/include/lexer/Tag.h" />
+        <option value="$PROJECT_DIR$/include/praser/CPraser.h" />
         <option value="$PROJECT_DIR$/src/praser/CPraser.cpp" />
       </list>
     </option>
@@ -263,7 +257,7 @@
               <item name="Ceno_Lang" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="Ceno-Lang" type="462c0819:PsiDirectoryNode" />
               <item name="include" type="462c0819:PsiDirectoryNode" />
-              <item name="lexer" type="462c0819:PsiDirectoryNode" />
+              <item name="praser" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Ceno_Lang" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
@@ -338,12 +332,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543838323722</updated>
-      <workItem from="1543838326419" duration="29596000" />
+      <workItem from="1543838326419" duration="29804000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29596000" />
+    <option name="totallyTimeSpent" value="29804000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -519,14 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include/praser/CPraser.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="544" column="22" lean-forward="false" selection-start-line="21" selection-start-column="8" selection-end-line="544" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="230">
@@ -648,10 +634,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/include/praser/CPraser.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="324" column="24" lean-forward="true" selection-start-line="324" selection-start-column="24" selection-end-line="324" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/praser/CPraser.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="382" column="52" lean-forward="false" selection-start-line="382" selection-start-column="52" selection-end-line="382" selection-end-column="52" />
+        <state relative-caret-position="309">
+          <caret line="394" column="25" lean-forward="true" selection-start-line="394" selection-start-column="25" selection-end-line="394" selection-end-column="25" />
           <folding>
             <element signature="e#44#63#0" expanded="true" />
           </folding>

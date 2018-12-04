@@ -314,11 +314,15 @@ namespace  CenoLang {
          * | 'case' const_exp ':' stat
          * | 'default' ':' stat
          * ;
+         */
+        void labeled_stat();
+
+        /**
          * exp_stat        : exp ';'
          * |   ';'
          * ;
-         */
-        void labeled_stat();
+        */
+        void exp_stat();
 
         /**
          * compound_stat       : '{' decl_list stat_list '}'

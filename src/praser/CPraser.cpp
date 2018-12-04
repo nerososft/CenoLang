@@ -365,9 +365,6 @@ namespace CenoLang {
      * | 'case' const_exp ':' stat
      * | 'default' ':' stat
      * ;
-     * exp_stat        : exp ';'
-     * |   ';'
-     * ;
      */
     void CPraser::labeled_stat(){
         switch (look->tag){
@@ -384,6 +381,20 @@ namespace CenoLang {
                 match(Tag::DEFAULT);
                 match(':');
                 stat();
+        }
+    }
+
+    /**
+     * exp_stat        : exp ';'
+     * |   ';'
+     * ;
+     */
+    void CPraser::exp_stat(){
+        if(look->tag==';'){ // ';'
+            match(';');
+        }else{ // exp ';'
+            exp();
+            match(';');
         }
     }
 
