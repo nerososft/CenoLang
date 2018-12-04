@@ -458,14 +458,31 @@ namespace CenoLang {
      * | '{' initializer_list ',' '}'
      * ;
      */
-    void CPraser::initializer();
+    void CPraser::initializer(){
+        if(look->tag=='{'){
+            match('{');
+            initializer_list();
+            if(look->tag==','){
+                match(',');
+            }
+            match('}');
+        }else{ // todo may be need a if condition
+            assignment_exp();
+        }
+    }
 
     /**
      *  initializer_list    : initializer
      * | initializer_list ',' initializer
      * ;
      */
-    void CPraser::initializer_list();
+    void CPraser::initializer_list(){
+        initializer();
+        while(look->tag==','){
+            match(',');
+            initializer();
+        }
+    }
 
 
     /**
@@ -473,7 +490,12 @@ namespace CenoLang {
      * | spec_qualifier_list
      * ;
      */
-    void CPraser::type_name();
+    void CPraser::type_name(){
+        spec_qualifier_list();
+        if(look->tag=='*'||look->tag=='('||look->tag=='['){
+            abstract_declarator();
+        }
+    }
 
     /**
      * abstract_declarator : pointer
@@ -481,7 +503,16 @@ namespace CenoLang {
      * |   direct_abstract_declarator
      * ;
      */
-    void CPraser::abstract_declarator();
+    void CPraser::abstract_declarator(){
+        if(look->tag=='*'){
+            pointer();
+            if(look->tag=='('||look->tag=='['){ // pointer direct_abstract_declarator
+                direct_abstract_declarator();
+            }
+        }else if(look->tag=='('||look->tag=='['){ // direct_abstract_declarator
+            direct_abstract_declarator();
+        }
+    }
 
     /**
      *  direct_abstract_declarator: '(' abstract_declarator ')'
@@ -495,14 +526,18 @@ namespace CenoLang {
      * |               '('     ')'
      * ;
      */
-    void CPraser::direct_abstract_declarator();
+    void CPraser::direct_abstract_declarator(){
+        // todo complex
+    }
 
 
     /**
      *  typedef_name        : id
      * ;
      */
-    void CPraser::typedef_name();
+    void CPraser::typedef_name() {
+        match(Tag::ID);
+    }
 
     /**
      * stat            : labeled_stat
@@ -513,7 +548,30 @@ namespace CenoLang {
      * | jump_stat
      * ;
      */
-    void CPraser::stat();
+    void CPraser::stat(){
+        if(look->tag==Tag::CASE||look->tag==Tag::DEFAULT){
+            labeled_stat();
+        }
+        if(look->tag==';'){
+            exp_stat();
+        }
+        if(look->tag==Tag::ID){
+            // complex
+        }
+        if(look->tag=='{'){
+            compound_stat();
+        }
+        if(look->tag==Tag::IF||look->tag==Tag::SWITCH){
+            selection_stat();
+        }
+        if(look->tag==Tag::WHILE||look->tag==Tag::DO||look->tag==Tag::FOR){
+            iteration_stat();
+        }
+        if(look->tag==Tag::GOTO||look->tag==Tag::BREAK||look->tag==Tag::CONTINUE||look->tag==Tag::RETURN){
+            jump_stat();
+        }
+
+    }
 
     /**
      * labeled_stat        : id ':' stat
