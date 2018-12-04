@@ -28,7 +28,7 @@ namespace CenoLang {
     }
 
     void CPraser::program() {
-
+        translation_unit();
     }
 
     /**
@@ -36,7 +36,10 @@ namespace CenoLang {
          * | translation_unit external_decl
          * ;
          */
-    void CPraser::translation_unit();
+    void CPraser::translation_unit(){
+        external_decl();
+        // todo
+    }
 
 
     /**
@@ -44,7 +47,9 @@ namespace CenoLang {
      * | decl
      * ;
      */
-    void CPraser::external_decl();
+    void CPraser::external_decl(){
+        function_definition();
+    }
 
 
     /**

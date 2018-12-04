@@ -26,6 +26,12 @@ namespace  CenoLang {
         reserve(Keywords::ELSE); // else
         reserve(Keywords::BREAK); // break
 
+        reserve(Keywords::AUTO); // auto
+        reserve(Keywords::REGISTER); // register
+        reserve(Keywords::STATIC); // static
+        reserve(Keywords::EXTERN); // extern
+        reserve(Keywords::TYPEDEF); // typedef
+
 
         reserve(Types::BOOLEAN); // double
         reserve(Types::CHAR); // char

@@ -40,6 +40,11 @@ namespace CenoLang {
         static Keyword *CONTINUE = new Keyword("continue", Tag::CONTINUE);
         static Keyword *RETURN = new Keyword("return", Tag::RETURN);
 
+        static Keyword *AUTO = new Keyword("continue", Tag::AUTO);
+        static Keyword *REGISTER = new Keyword("register", Tag::REGISTER);
+        static Keyword *STATIC = new Keyword("static", Tag::STATIC);
+        static Keyword *EXTERN = new Keyword("extern", Tag::EXTERN);
+        static Keyword *TYPEDEF = new Keyword("typedef", Tag::TYPEDEF);
 
     };
 

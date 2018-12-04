@@ -38,6 +38,12 @@ namespace CenoLang {
         static const int CONTINUE = 18;
         static const int RETURN = 19;
 
+        static const int REGISTER = 20;
+        static const int STATIC = 21;
+        static const int EXTERN = 22;
+        static const int TYPEDEF = 23;
+        static const int  AUTO = 24;
+
 
 
     };
