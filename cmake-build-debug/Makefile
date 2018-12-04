@@ -123,32 +123,32 @@ Ceno_Lang/fast:
 	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/build
 .PHONY : Ceno_Lang/fast
 
-include/symbol/TypeQualifier.o: include/symbol/TypeQualifier.cpp.o
+include/symbol/StructUnion.o: include/symbol/StructUnion.cpp.o
 
-.PHONY : include/symbol/TypeQualifier.o
+.PHONY : include/symbol/StructUnion.o
 
 # target to build an object file
-include/symbol/TypeQualifier.cpp.o:
-	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.o
-.PHONY : include/symbol/TypeQualifier.cpp.o
+include/symbol/StructUnion.cpp.o:
+	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.o
+.PHONY : include/symbol/StructUnion.cpp.o
 
-include/symbol/TypeQualifier.i: include/symbol/TypeQualifier.cpp.i
+include/symbol/StructUnion.i: include/symbol/StructUnion.cpp.i
 
-.PHONY : include/symbol/TypeQualifier.i
+.PHONY : include/symbol/StructUnion.i
 
 # target to preprocess a source file
-include/symbol/TypeQualifier.cpp.i:
-	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.i
-.PHONY : include/symbol/TypeQualifier.cpp.i
+include/symbol/StructUnion.cpp.i:
+	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.i
+.PHONY : include/symbol/StructUnion.cpp.i
 
-include/symbol/TypeQualifier.s: include/symbol/TypeQualifier.cpp.s
+include/symbol/StructUnion.s: include/symbol/StructUnion.cpp.s
 
-.PHONY : include/symbol/TypeQualifier.s
+.PHONY : include/symbol/StructUnion.s
 
 # target to generate assembly for a file
-include/symbol/TypeQualifier.cpp.s:
-	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.s
-.PHONY : include/symbol/TypeQualifier.cpp.s
+include/symbol/StructUnion.cpp.s:
+	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.s
+.PHONY : include/symbol/StructUnion.cpp.s
 
 src/clcompiler/CenoLangCompiler.o: src/clcompiler/CenoLangCompiler.cpp.o
 
@@ -348,9 +348,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Ceno_Lang"
-	@echo "... include/symbol/TypeQualifier.o"
-	@echo "... include/symbol/TypeQualifier.i"
-	@echo "... include/symbol/TypeQualifier.s"
+	@echo "... include/symbol/StructUnion.o"
+	@echo "... include/symbol/StructUnion.i"
+	@echo "... include/symbol/StructUnion.s"
 	@echo "... src/clcompiler/CenoLangCompiler.o"
 	@echo "... src/clcompiler/CenoLangCompiler.i"
 	@echo "... src/clcompiler/CenoLangCompiler.s"

@@ -42,6 +42,12 @@ namespace CenoLang {
 
         static const int TYPE_QUALIFIER = 21; // const | volatile
 
+        static const int STRUCT_UNION = 22; // 'struct' | 'union'
+
+        static const int GOTO = 23; // goto
+
+        static const int FOR = 24; // for
+
     };
 }
 

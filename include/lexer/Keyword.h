@@ -33,11 +33,13 @@ namespace CenoLang {
 
         static Keyword *IF = new Keyword("if", Tag::IF);
         static Keyword *ELSE = new Keyword("else", Tag::ELSE);
-        static Keyword *BREAK = new Keyword("break", Tag::BREAK);
         static Keyword *DO = new Keyword("do", Tag::DO);
         static Keyword *WHILE = new Keyword("while", Tag::WHILE);
+        static Keyword *FOR = new Keyword("for", Tag::FOR);
 
+        static Keyword *GOTO = new Keyword("goto", Tag::GOTO);
         static Keyword *CONTINUE = new Keyword("continue", Tag::CONTINUE);
+        static Keyword *BREAK = new Keyword("break", Tag::BREAK);
         static Keyword *RETURN = new Keyword("return", Tag::RETURN);
 
     };

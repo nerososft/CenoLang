@@ -110,6 +110,7 @@ namespace CenoLang {
             match(Tag::BASIC_TYPE);
         }
         // todo
+
     }
 
     /**
@@ -129,13 +130,32 @@ namespace CenoLang {
      * | struct_or_union id
      * ;
      */
-    void CPraser::struct_or_union_spec();
+    void CPraser::struct_or_union_spec(){
+        struct_or_union(); // struct_or_union
+        if(look->tag==Tag::ID){
+            match(Tag::ID); // id
+            if(look->tag=='{'){ // '{' struct_decl_list '}'
+                match('{');
+                struct_decl_list();
+                match('}');
+            }
+        }
+        if(look->tag=='{'){ // '{' struct_decl_list '}'
+            match('{');
+            struct_decl_list();
+            match('}');
+        }
+    }
 
     /**
      *  struct_or_union     : 'struct' | 'union'
      * ;
      */
-    void CPraser::struct_or_union();
+    void CPraser::struct_or_union(){
+        if(look->tag==Tag::STRUCT_UNION){
+            match(Tag::STRUCT_UNION);
+        }
+    }
 
     /**
      * struct_decl_list    : struct_decl
@@ -388,7 +408,79 @@ namespace CenoLang {
      * | 'for' '(' ';' ';' ')' stat
      * ;
      */
-    void CPraser::iteration_stat();
+    void CPraser::iteration_stat(){
+        switch (look->tag){
+            case Tag::WHILE: // 'while' '(' exp ')' stat
+                match(Tag::WHILE);
+                match('(');
+                exp();
+                match(')');
+                stat();
+            case Tag::DO: // 'do' stat 'while' '(' exp ')' ';'
+                match(Tag::DO);
+                stat();
+                match(Tag::WHILE);
+                match('(');
+                exp();
+                match(')');
+                match(';');
+            case Tag::FOR:
+                match(Tag::FOR);
+                match('(');
+                if(look->tag==';'){
+                    match(';');
+                    if(look->tag==';'){
+                        match(';');
+                        if(look->tag==')'){ // 'for' '(' ';' ';' ')' stat
+                            match(')');
+                            stat();
+                        }else{ // 'for' '(' ';' ';' exp ')' stat
+                            exp();
+                            match(')');
+                            stat();
+                        }
+                    }else{
+                        exp();
+                        match(';');
+                        if(look->tag==')'){ // 'for' '(' ';' exp ';' ')' stat
+                            match(')');
+                            stat();
+                        }else{ // 'for' '(' ';' exp ';' exp ')' stat
+                            exp();
+                            match(';');
+                            exp();
+                            match(')');
+                            stat();
+                        }
+                    }
+                }else{
+                    exp();
+                    match(';');
+                    if(look->tag==';'){
+                        match(';');
+                        if(look->tag==')'){ // 'for' '(' exp ';' ';' ')' stat
+                            match(')');
+                            stat();
+                        }else{ // 'for' '(' exp ';' ';' exp ')' stat
+                            exp();
+                            match(')');
+                            stat();
+                        }
+                    }else{
+                        exp();
+                        match(';');
+                        if(look->tag==')'){ // 'for' '(' exp ';' exp ';' ')' stat
+                            match(')');
+                            stat();
+                        }else{ // 'for' '(' exp ';' exp ';' exp ')' stat
+                            exp();
+                            match(')');
+                            stat();
+                        }
+                    }
+                }
+        }
+    }
 
     /**
      *  jump_stat       : 'goto' id ';'
@@ -398,7 +490,28 @@ namespace CenoLang {
      * | 'return'  ';'
      * ;
      */
-    void CPraser::jump_stat();
+    void CPraser::jump_stat(){
+        switch (look->tag){
+            case Tag::GOTO: // 'goto' id ';'
+                match(Tag::GOTO);
+                match(Tag::ID);
+                match(';');
+            case Tag::CONTINUE: //'continue' ';'
+                match(Tag::CONTINUE);
+                match(';');
+            case Tag::BREAK: // 'break' ';'
+                match(Tag::BREAK);
+                match(';');
+            case Tag::RETURN:
+                match(Tag::RETURN);
+                if(look->tag==';'){
+                    match(';');
+                }else{
+                    exp();
+                    match(';');
+                }
+        }
+    }
 
     /**
      *  exp         : assignment_exp
@@ -557,14 +670,21 @@ namespace CenoLang {
      * | '(' exp ')'
      * ;
      */
-    void CPraser::primary_exp();
+    void CPraser::primary_exp(){
+        if(look->tag==Tag::ID){
+            match(Tag::ID);
+        }
+        // todo
+    }
 
     /**
      *  argument_exp_list   : assignment_exp
      * | argument_exp_list ',' assignment_exp
      * ;
      */
-    void CPraser::argument_exp_list();
+    void CPraser::argument_exp_list(){
+
+    }
 
     /**
      * const           : int_const
@@ -573,6 +693,8 @@ namespace CenoLang {
      * | enumeration_const
      * ;
      */
-    void CPraser::_const();
+    void CPraser::_const(){
+
+    }
 
 }

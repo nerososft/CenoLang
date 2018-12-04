@@ -194,7 +194,7 @@ namespace CenoLang{
                 }
                 return;
             default:
-                error("Syntax Error",0);
+                error("c",0);
         }
 
     }

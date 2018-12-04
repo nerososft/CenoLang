@@ -115,10 +115,13 @@
 		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/symbol/StorageClass.h">
 			<Option target="Ceno_Lang"/>
 		</Unit>
-		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/symbol/Type.h">
+		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/symbol/StructUnion.cpp">
 			<Option target="Ceno_Lang"/>
 		</Unit>
-		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/symbol/TypeQualifier.cpp">
+		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/symbol/StructUnion.h">
+			<Option target="Ceno_Lang"/>
+		</Unit>
+		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/symbol/Type.h">
 			<Option target="Ceno_Lang"/>
 		</Unit>
 		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/symbol/TypeQualifier.h">

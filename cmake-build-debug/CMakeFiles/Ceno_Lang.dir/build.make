@@ -225,28 +225,28 @@ CMakeFiles/Ceno_Lang.dir/src/praser/CPraser.cpp.o.provides: CMakeFiles/Ceno_Lang
 CMakeFiles/Ceno_Lang.dir/src/praser/CPraser.cpp.o.provides.build: CMakeFiles/Ceno_Lang.dir/src/praser/CPraser.cpp.o
 
 
-CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.o: CMakeFiles/Ceno_Lang.dir/flags.make
-CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.o: ../include/symbol/TypeQualifier.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/neroyang/project/Ceno-Lang/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.o"
-	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.o -c /Users/neroyang/project/Ceno-Lang/include/symbol/TypeQualifier.cpp
+CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.o: CMakeFiles/Ceno_Lang.dir/flags.make
+CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.o: ../include/symbol/StructUnion.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/neroyang/project/Ceno-Lang/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.o"
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.o -c /Users/neroyang/project/Ceno-Lang/include/symbol/StructUnion.cpp
 
-CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.i"
-	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/neroyang/project/Ceno-Lang/include/symbol/TypeQualifier.cpp > CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.i
+CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.i"
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/neroyang/project/Ceno-Lang/include/symbol/StructUnion.cpp > CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.i
 
-CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.s"
-	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/neroyang/project/Ceno-Lang/include/symbol/TypeQualifier.cpp -o CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.s
+CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.s"
+	/Applications/Xcode-beta.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/neroyang/project/Ceno-Lang/include/symbol/StructUnion.cpp -o CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.s
 
-CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.o.requires:
+CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.o.requires:
 
-.PHONY : CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.o.requires
+.PHONY : CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.o.requires
 
-CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.o.provides: CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.o.provides.build
-.PHONY : CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.o.provides
+CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.o.provides: CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Ceno_Lang.dir/build.make CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.o.provides.build
+.PHONY : CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.o.provides
 
-CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.o.provides.build: CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.o
+CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.o.provides.build: CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.o
 
 
 # Object files for target Ceno_Lang
@@ -258,7 +258,7 @@ Ceno_Lang_OBJECTS = \
 "CMakeFiles/Ceno_Lang.dir/src/symbol/Array.cpp.o" \
 "CMakeFiles/Ceno_Lang.dir/src/praser/Praser.cpp.o" \
 "CMakeFiles/Ceno_Lang.dir/src/praser/CPraser.cpp.o" \
-"CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.o"
+"CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.o"
 
 # External object files for target Ceno_Lang
 Ceno_Lang_EXTERNAL_OBJECTS =
@@ -270,7 +270,7 @@ Ceno_Lang: CMakeFiles/Ceno_Lang.dir/src/symbol/Type.cpp.o
 Ceno_Lang: CMakeFiles/Ceno_Lang.dir/src/symbol/Array.cpp.o
 Ceno_Lang: CMakeFiles/Ceno_Lang.dir/src/praser/Praser.cpp.o
 Ceno_Lang: CMakeFiles/Ceno_Lang.dir/src/praser/CPraser.cpp.o
-Ceno_Lang: CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.o
+Ceno_Lang: CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.o
 Ceno_Lang: CMakeFiles/Ceno_Lang.dir/build.make
 Ceno_Lang: CMakeFiles/Ceno_Lang.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/neroyang/project/Ceno-Lang/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Ceno_Lang"
@@ -288,7 +288,7 @@ CMakeFiles/Ceno_Lang.dir/requires: CMakeFiles/Ceno_Lang.dir/src/symbol/Type.cpp.
 CMakeFiles/Ceno_Lang.dir/requires: CMakeFiles/Ceno_Lang.dir/src/symbol/Array.cpp.o.requires
 CMakeFiles/Ceno_Lang.dir/requires: CMakeFiles/Ceno_Lang.dir/src/praser/Praser.cpp.o.requires
 CMakeFiles/Ceno_Lang.dir/requires: CMakeFiles/Ceno_Lang.dir/src/praser/CPraser.cpp.o.requires
-CMakeFiles/Ceno_Lang.dir/requires: CMakeFiles/Ceno_Lang.dir/include/symbol/TypeQualifier.cpp.o.requires
+CMakeFiles/Ceno_Lang.dir/requires: CMakeFiles/Ceno_Lang.dir/include/symbol/StructUnion.cpp.o.requires
 
 .PHONY : CMakeFiles/Ceno_Lang.dir/requires
 

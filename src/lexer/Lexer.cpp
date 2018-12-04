@@ -8,6 +8,7 @@
 #include "../../include/symbol/Type.h"
 #include "../../include/symbol/StorageClass.h"
 #include "../../include/symbol/TypeQualifier.h"
+#include "../../include/symbol/StructUnion.h"
 
 #include <vector>
 #include <iostream>
@@ -22,11 +23,18 @@ namespace  CenoLang {
         reserve(Keywords::FALSE);
         reserve(Keywords::TRUE); // true
 
-        reserve(Keywords::DO); // do
-        reserve(Keywords::WHILE); // while
+
         reserve(Keywords::IF); // if
         reserve(Keywords::ELSE); // else
+        reserve(Keywords::DO); // do
+        reserve(Keywords::WHILE); // while
+        reserve(Keywords::FOR); // for
+
+        reserve(Keywords::GOTO); // goto
+        reserve(Keywords::CONTINUE); // continue
         reserve(Keywords::BREAK); // break
+        reserve(Keywords::RETURN); // return
+
 
         reserve(Types::BOOLEAN); // double
         reserve(Types::CHAR); // char
@@ -47,6 +55,8 @@ namespace  CenoLang {
         reserve(TypeQualifiers::CONST); // consts
         reserve(TypeQualifiers::VOLATILE); // volatile
 
+        reserve(StructUnions::STRUCT); // struct
+        reserve(StructUnions::UNION); // union
 
 
     }
