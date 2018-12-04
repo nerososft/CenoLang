@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include "../../include/clcompiler/Config.h"
 #include "../../include/praser/CPraser.h"
 
 namespace CenoLang {
@@ -11,7 +12,11 @@ namespace CenoLang {
     }
 
     void CPraser::match(int t) {
+
+#if defined(_DEBUG_PRASER)
         std::cout << "MATCH(" << look->tag << ")(" << t << ")" << std::endl;
+#endif
+
         if (look->tag == t) {
             move();
         } else {
@@ -24,10 +29,20 @@ namespace CenoLang {
     }
 
     void CPraser::start(){
+
+#if defined(_DEBUG_PRASER)
+        std::cout << "start (" << look->tag << ")"<< std::endl;
+#endif
+
         program();
     }
 
     void CPraser::program() {
+
+#if defined(_DEBUG_PRASER)
+        std::cout << "program (" << look->tag << ")"<< std::endl;
+#endif
+
         translation_unit();
     }
 
@@ -37,8 +52,19 @@ namespace CenoLang {
          * ;
          */
     void CPraser::translation_unit(){
-        external_decl();
-        // todo
+
+#if defined(_DEBUG_PRASER)
+        std::cout << "translation_unit (" << look->tag << ")"<< std::endl;
+#endif
+
+        do {
+            external_decl();
+        }while(look->tag!=Tag::TYPE_QUALIFIER
+               && look->tag!=Tag::BASIC_TYPE
+               && look->tag!=Tag::STORAGE_TYPE
+               && look->tag!='*'
+               && look->tag!='('
+               && look->tag!=Tag::ID);
     }
 
 
@@ -48,6 +74,10 @@ namespace CenoLang {
      * ;
      */
     void CPraser::external_decl(){
+
+#if defined(_DEBUG_PRASER)
+        std::cout << "external_decl (" << look->tag << ")"<< std::endl;
+#endif
         function_definition();
     }
 
@@ -59,7 +89,13 @@ namespace CenoLang {
      * |       declarator  compound_stat
      * ;
      */
-    void CPraser::function_definition();
+    void CPraser::function_definition(){
+
+#if defined(_DEBUG_PRASER)
+        std::cout << "function_definition (" << look->tag << ")"<< std::endl;
+#endif
+
+    }
 
     /**
      * decl            : decl_specs init_declarator_list ';'
@@ -849,55 +885,55 @@ namespace CenoLang {
                           | '>>=' | '&=' | '^=' | '|='
      * ;
      */
-    void CPraser::assignment_operator();
+    void CPraser::assignment_operator(){}
 
     /**
      * conditional_exp     : logical_or_exp
      * | logical_or_exp '?' exp ':' conditional_exp
      * ;
      */
-    void CPraser::conditional_exp();
+    void CPraser::conditional_exp(){}
 
     /**
      *  const_exp       : conditional_exp
      * ;
      */
-    void CPraser::const_exp();
+    void CPraser::const_exp(){}
 
     /**
      *  logical_or_exp      : logical_and_exp
      * | logical_or_exp '||' logical_and_exp
      * ;
      */
-    void CPraser::logical_or_exp();
+    void CPraser::logical_or_exp(){}
 
     /**
      * logical_and_exp     : inclusive_or_exp
      * | logical_and_exp '&&' inclusive_or_exp
      * ;
      */
-    void CPraser::logical_and_exp();
+    void CPraser::logical_and_exp(){}
 
     /**
      * inclusive_or_exp    : exclusive_or_exp
      * | inclusive_or_exp '|' exclusive_or_exp
      * ;
      */
-    void CPraser::inclusive_or_exp();
+    void CPraser::inclusive_or_exp(){}
 
     /**
      * exclusive_or_exp    : and_exp
      * | exclusive_or_exp '^' and_exp
      * ;
      */
-    void CPraser::exclusive_or_exp();
+    void CPraser::exclusive_or_exp(){}
 
     /**
      * and_exp         : equality_exp
      * | and_exp '&' equality_exp
      * ;
      */
-    void CPraser::and_exp();
+    void CPraser::and_exp(){}
 
     /**
      *  equality_exp        : relational_exp
@@ -905,7 +941,7 @@ namespace CenoLang {
      * | equality_exp '!=' relational_exp
      * ;
      */
-    void CPraser::equality_exp();
+    void CPraser::equality_exp(){}
 
     /**
      *  relational_exp      : shift_expression
@@ -915,7 +951,7 @@ namespace CenoLang {
      * | relational_exp '>=' shift_expression
      * ;
      */
-    void CPraser::relational_exp();
+    void CPraser::relational_exp(){}
 
     /**
      * shift_expression    : additive_exp
@@ -923,7 +959,7 @@ namespace CenoLang {
      * | shift_expression '>>' additive_exp
      * ;
      */
-    void CPraser::shift_expression();
+    void CPraser::shift_expression(){}
 
     /**
      *  additive_exp        : mult_exp
@@ -931,7 +967,7 @@ namespace CenoLang {
      * | additive_exp '-' mult_exp
      * ;
      */
-    void CPraser::additive_exp();
+    void CPraser::additive_exp(){}
 
     /**
      *  mult_exp        : cast_exp
@@ -940,14 +976,14 @@ namespace CenoLang {
      * | mult_exp '%' cast_exp
     ;
      */
-    void CPraser::mult_exp();
+    void CPraser::mult_exp(){}
 
     /**
      * cast_exp        : unary_exp
      * | '(' type_name ')' cast_exp
      * ;
      */
-    void CPraser::cast_exp();
+    void CPraser::cast_exp(){}
 
     /**
      * unary_exp       : postfix_exp
@@ -958,13 +994,13 @@ namespace CenoLang {
      * | 'sizeof' '(' type_name ')'
      * ;
      */
-    void CPraser::unary_exp();
+    void CPraser::unary_exp(){}
 
     /**
      *  unary_operator      : '&' | '*' | '+' | '-' | '~' | '!'
      * ;
      */
-    void CPraser::unary_operator();
+    void CPraser::unary_operator(){}
 
     /**
      * postfix_exp     : primary_exp
@@ -977,7 +1013,7 @@ namespace CenoLang {
      * | postfix_exp '--'
      * ;
      */
-    void CPraser::postfix_exp();
+    void CPraser::postfix_exp(){}
 
     /**
      * primary_exp     : id

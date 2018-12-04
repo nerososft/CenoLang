@@ -8,6 +8,8 @@
 
 /Users/neroyang/project/Ceno-Lang/include/clcompiler/CenoLangCompiler.h
 
+/Users/neroyang/project/Ceno-Lang/include/clcompiler/Config.h
+
 /Users/neroyang/project/Ceno-Lang/include/lexer/Keyword.h
 string
 -
@@ -42,7 +44,7 @@ Token.h
 
 /Users/neroyang/project/Ceno-Lang/include/lexer/Token.h
 
-/Users/neroyang/project/Ceno-Lang/include/praser/NewPraser.h
+/Users/neroyang/project/Ceno-Lang/include/praser/CPraser.h
 ../lexer/Lexer.h
 /Users/neroyang/project/Ceno-Lang/include/lexer/Lexer.h
 
@@ -54,7 +56,19 @@ Token.h
 Type.h
 /Users/neroyang/project/Ceno-Lang/include/symbol/Type.h
 
+/Users/neroyang/project/Ceno-Lang/include/symbol/StorageClass.h
+../lexer/Keyword.h
+/Users/neroyang/project/Ceno-Lang/include/lexer/Keyword.h
+
+/Users/neroyang/project/Ceno-Lang/include/symbol/StructUnion.h
+../lexer/Keyword.h
+/Users/neroyang/project/Ceno-Lang/include/lexer/Keyword.h
+
 /Users/neroyang/project/Ceno-Lang/include/symbol/Type.h
+../lexer/Keyword.h
+/Users/neroyang/project/Ceno-Lang/include/lexer/Keyword.h
+
+/Users/neroyang/project/Ceno-Lang/include/symbol/TypeQualifier.h
 ../lexer/Keyword.h
 /Users/neroyang/project/Ceno-Lang/include/lexer/Keyword.h
 
@@ -63,6 +77,8 @@ Type.h
 /Users/neroyang/project/Ceno-Lang/include/clcompiler/CenoLangCompiler.h
 
 /Users/neroyang/project/Ceno-Lang/src/lexer/Lexer.cpp
+../../include/clcompiler/Config.h
+/Users/neroyang/project/Ceno-Lang/include/clcompiler/Config.h
 ../../include/lexer/Lexer.h
 /Users/neroyang/project/Ceno-Lang/include/lexer/Lexer.h
 ../../include/lexer/Num.h
@@ -71,6 +87,12 @@ Type.h
 /Users/neroyang/project/Ceno-Lang/include/lexer/Real.h
 ../../include/symbol/Type.h
 /Users/neroyang/project/Ceno-Lang/include/symbol/Type.h
+../../include/symbol/StorageClass.h
+/Users/neroyang/project/Ceno-Lang/include/symbol/StorageClass.h
+../../include/symbol/TypeQualifier.h
+/Users/neroyang/project/Ceno-Lang/include/symbol/TypeQualifier.h
+../../include/symbol/StructUnion.h
+/Users/neroyang/project/Ceno-Lang/include/symbol/StructUnion.h
 vector
 -
 iostream
@@ -79,18 +101,22 @@ iostream
 /Users/neroyang/project/Ceno-Lang/src/main.cpp
 iostream
 -
+../include/clcompiler/Config.h
+/Users/neroyang/project/Ceno-Lang/include/clcompiler/Config.h
 ../include/lexer/Lexer.h
 /Users/neroyang/project/Ceno-Lang/include/lexer/Lexer.h
 ../include/praser/Praser.h
 /Users/neroyang/project/Ceno-Lang/include/praser/Praser.h
-../include/praser/NewPraser.h
-/Users/neroyang/project/Ceno-Lang/include/praser/NewPraser.h
+../include/praser/CPraser.h
+/Users/neroyang/project/Ceno-Lang/include/praser/CPraser.h
 
-/Users/neroyang/project/Ceno-Lang/src/praser/NewPraser.cpp
+/Users/neroyang/project/Ceno-Lang/src/praser/CPraser.cpp
 iostream
 -
-../../include/praser/NewPraser.h
-/Users/neroyang/project/Ceno-Lang/include/praser/NewPraser.h
+../../include/clcompiler/Config.h
+/Users/neroyang/project/Ceno-Lang/include/clcompiler/Config.h
+../../include/praser/CPraser.h
+/Users/neroyang/project/Ceno-Lang/include/praser/CPraser.h
 
 /Users/neroyang/project/Ceno-Lang/src/praser/Praser.cpp
 iostream

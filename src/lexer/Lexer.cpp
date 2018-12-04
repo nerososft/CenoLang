@@ -1,7 +1,7 @@
 //
 // Created by neroyang on 2018/12/3.
 //
-
+#include "../../include/clcompiler/Config.h"
 #include "../../include/lexer/Lexer.h"
 #include "../../include/lexer/Num.h"
 #include "../../include/lexer/Real.h"
@@ -41,6 +41,8 @@ namespace  CenoLang {
 
         reserve(Types::BOOLEAN); // double
         reserve(Types::CHAR); // char
+        reserve(Types::INT); // int
+
         reserve(Types::FLOAT); // float
         reserve(Types::VOID); // void
         reserve(Types::SHORT); //short
@@ -191,8 +193,11 @@ namespace  CenoLang {
         std::map<std::string,Keyword*>::iterator iter;
         for(iter=this->words.begin(); iter!=this->words.end(); iter++) {
             Keyword* keyword = iter->second;
-            std::cout<<"FINF("<<key<<") BL("<<iter->first<<") TAG("<<keyword->tag<<")"<<std::endl;
             if(iter->first==key){
+
+#if defined(_DEBUG_LEXER)
+                std::cout<<"FINF("<<key<<") BL("<<iter->first<<") TAG("<<keyword->tag<<")"<<std::endl;
+#endif
                 return iter->second;
             }
         }

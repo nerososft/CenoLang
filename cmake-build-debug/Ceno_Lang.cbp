@@ -85,6 +85,9 @@
 		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/clcompiler/CenoLangCompiler.h">
 			<Option target="Ceno_Lang"/>
 		</Unit>
+		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/clcompiler/Config.h">
+			<Option target="Ceno_Lang"/>
+		</Unit>
 		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/lexer/Keyword.h">
 			<Option target="Ceno_Lang"/>
 		</Unit>
@@ -113,9 +116,6 @@
 			<Option target="Ceno_Lang"/>
 		</Unit>
 		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/symbol/StorageClass.h">
-			<Option target="Ceno_Lang"/>
-		</Unit>
-		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/symbol/StructUnion.cpp">
 			<Option target="Ceno_Lang"/>
 		</Unit>
 		<Unit filename="/Users/neroyang/project/Ceno-Lang/include/symbol/StructUnion.h">
