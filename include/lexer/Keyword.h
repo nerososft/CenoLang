@@ -48,6 +48,8 @@ namespace CenoLang {
         static Keyword *BREAK = new Keyword("break", Tag::BREAK);
         static Keyword *RETURN = new Keyword("return", Tag::RETURN);
 
+        static Keyword *ENUM = new Keyword("enum", Tag::ENUM);
+
     };
 
 };

@@ -52,6 +52,8 @@ namespace CenoLang {
         static const int CASE = 26; // case
         static const int DEFAULT = 27; // default
 
+        static const int ENUM = 28; // enum
+
 
 
     };

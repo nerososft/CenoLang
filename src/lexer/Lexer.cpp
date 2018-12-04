@@ -36,6 +36,8 @@ namespace  CenoLang {
         reserve(Keywords::BREAK); // break
         reserve(Keywords::RETURN); // return
 
+        reserve(Keywords::ENUM); // enum
+
 
         reserve(Types::BOOLEAN); // double
         reserve(Types::CHAR); // char

@@ -66,14 +66,26 @@ namespace CenoLang {
      * | decl_specs            ';'
      * ;
      */
-    void CPraser::decl();
+    void CPraser::decl(){
+        decl_specs();
+        if(look->tag==';'){ // decl_specs ';'
+            match(';');
+        }else{ // decl_specs init_declarator_list ';'
+            init_declarator_list();
+            match(';');
+        }
+    }
 
     /**
      * decl_list       : decl
      * | decl_list decl
      * ;
      */
-    void CPraser::decl_list();
+    void CPraser::decl_list(){
+        do{
+            decl();
+        }while(look->tag!=';');
+    }
 
 
     /**
@@ -85,7 +97,19 @@ namespace CenoLang {
      * | type_qualifier
      * ;
      */
-    void CPraser::decl_specs();
+    void CPraser::decl_specs(){
+        do{
+            switch (look->tag){
+                case Tag::STORAGE_TYPE:
+                    match(Tag::STORAGE_TYPE);
+                case Tag::BASIC_TYPE:
+                    match(Tag::BASIC_TYPE);
+                case Tag::TYPE_QUALIFIER:
+                    match(Tag::TYPE_QUALIFIER);
+            }
+        }while (look->tag==Tag::STORAGE_TYPE||look->tag==Tag::BASIC_TYPE||look->tag==Tag::TYPE_QUALIFIER);
+
+    }
 
     /**
      * storage_class_spec  : 'auto' | 'register' | 'static' | 'extern' | 'typedef'
@@ -121,7 +145,6 @@ namespace CenoLang {
         if(look->tag==Tag::TYPE_QUALIFIER){
             match(Tag::TYPE_QUALIFIER);
         }
-        // todo
     }
 
     /**
@@ -162,7 +185,11 @@ namespace CenoLang {
      * | struct_decl_list struct_decl
      * ;
      */
-    void CPraser::struct_decl_list();
+    void CPraser::struct_decl_list(){
+        do{
+            struct_decl();
+        }while(look->tag==Tag::BASIC_TYPE || look->tag==Tag::TYPE_QUALIFIER);
+    }
 
 
     /**
@@ -170,20 +197,34 @@ namespace CenoLang {
      * | init_declarator_list ',' init_declarator
      * ;
      */
-    void CPraser::init_declarator_list();
+    void CPraser::init_declarator_list(){
+        do{
+            init_declarator();
+        }while(look->tag==','); // init_declarator_list ',' init_declarator
+        init_declarator(); // init_declarator
+    }
 
     /**
      * init_declarator     : declarator
      * | declarator '=' initializer
      * ;
      */
-    void CPraser::init_declarator();
+    void CPraser::init_declarator(){
+        declarator();
+        if(look->tag=='='){ // declarator '=' initializer
+            initializer();
+        }
+    }
 
     /**
      * struct_decl     : spec_qualifier_list struct_declarator_list ';'
      * ;
      */
-    void CPraser::struct_decl();
+    void CPraser::struct_decl(){
+        spec_qualifier_list();
+        struct_decl_list();
+        match(';');
+    }
 
     /**
      * spec_qualifier_list : type_spec spec_qualifier_list
@@ -192,7 +233,18 @@ namespace CenoLang {
      * | type_qualifier
      * ;
      */
-    void CPraser::spec_qualifier_list();
+    void CPraser::spec_qualifier_list(){
+        switch (look->tag){
+            case Tag::BASIC_TYPE:
+                do{
+                    match(Tag::BASIC_TYPE);
+                }while(look->tag==Tag::BASIC_TYPE);
+            case Tag::TYPE_QUALIFIER:
+                do{
+                    match(Tag::TYPE_QUALIFIER);
+                }while(look->tag==Tag::TYPE_QUALIFIER);
+        }
+    }
 
 
     /**
@@ -200,7 +252,12 @@ namespace CenoLang {
      * | struct_declarator_list ',' struct_declarator
      * ;
      */
-    void CPraser::struct_declarator_list();
+    void CPraser::struct_declarator_list(){
+        do{
+            struct_declarator();
+        }while(look->tag==',');
+        struct_declarator();
+    }
 
     /**
      *  struct_declarator   : declarator
@@ -208,7 +265,17 @@ namespace CenoLang {
      * |       ':' const_exp
      * ;
      */
-    void CPraser::struct_declarator();
+    void CPraser::struct_declarator(){
+        if(look->tag==':'){ // ':' const_exp
+            match(':');
+            cast_exp();
+        }else{
+            declarator();
+            if(look->tag==':'){ // declarator ':' const_exp
+                const_exp();
+            }
+        }
+    }
 
     /**
      * enum_spec       : 'enum' id '{' enumerator_list '}'
@@ -216,7 +283,21 @@ namespace CenoLang {
      * | 'enum' id
      * ;
      */
-    void CPraser::enum_spec();
+    void CPraser::enum_spec(){
+        match(Tag::ENUM);
+        if(look->tag==Tag::ID){
+            match(Tag::ID);
+            if(look->tag=='{'){ // 'enum' id '{' enumerator_list '}'
+                match('{');
+                enumerator_list();
+                match('}');
+            }
+        }else{ // 'enum'    '{' enumerator_list '}'
+            match('{');
+            enumerator_list();
+            match('}');
+        }
+    }
 
     /**
      *  enumerator_list     : enumerator

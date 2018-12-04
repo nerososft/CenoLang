@@ -33,8 +33,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="437d38f2-d8a5-403f-8550-226ad932ecb7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/C.BNF" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/lexer/Keyword.h" afterPath="$PROJECT_DIR$/include/lexer/Keyword.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/lexer/Tag.h" afterPath="$PROJECT_DIR$/include/lexer/Tag.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lexer/Lexer.cpp" afterPath="$PROJECT_DIR$/src/lexer/Lexer.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/praser/CPraser.cpp" afterPath="$PROJECT_DIR$/src/praser/CPraser.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -50,8 +52,8 @@
       <file leaf-file-name="Tag.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/lexer/Tag.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="256">
-              <caret line="52" column="49" lean-forward="false" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
+            <state relative-caret-position="187">
+              <caret line="54" column="39" lean-forward="false" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -67,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CPraser.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CPraser.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/praser/CPraser.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="800">
-              <caret line="66" column="8" lean-forward="false" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
+            <state relative-caret-position="336">
+              <caret line="291" column="34" lean-forward="true" selection-start-line="291" selection-start-column="34" selection-end-line="291" selection-end-column="34" />
               <folding>
                 <element signature="e#44#63#0" expanded="true" />
               </folding>
@@ -79,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="C.BNF" pinned="false" current-in-tab="true">
+      <file leaf-file-name="C.BNF" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/C.BNF">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="266" column="13" lean-forward="true" selection-start-line="266" selection-start-column="13" selection-end-line="266" selection-end-column="13" />
+            <state relative-caret-position="968">
+              <caret line="252" column="61" lean-forward="true" selection-start-line="252" selection-start-column="61" selection-end-line="252" selection-end-column="61" />
               <folding />
             </state>
           </provider>
@@ -102,7 +104,7 @@
       <file leaf-file-name="Praser.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/praser/Praser.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="654">
+            <state relative-caret-position="299">
               <caret line="49" column="24" lean-forward="false" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
               <folding />
             </state>
@@ -132,8 +134,8 @@
       <file leaf-file-name="Lexer.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/lexer/Lexer.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-27">
-              <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
+            <state relative-caret-position="273">
+              <caret line="38" column="40" lean-forward="false" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
               <folding>
                 <element signature="e#44#82#0" expanded="true" />
               </folding>
@@ -144,8 +146,8 @@
       <file leaf-file-name="Keyword.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/include/lexer/Keyword.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="37" column="58" lean-forward="false" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
+            <state relative-caret-position="402">
+              <caret line="50" column="52" lean-forward="true" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -200,12 +202,12 @@
         <option value="$PROJECT_DIR$/include/symbol/StructUnion.h" />
         <option value="$PROJECT_DIR$/include/symbol/TypeQualifier.h" />
         <option value="$PROJECT_DIR$/src/praser/Praser.cpp" />
-        <option value="$PROJECT_DIR$/src/lexer/Lexer.cpp" />
+        <option value="$PROJECT_DIR$/include/praser/CPraser.h" />
+        <option value="$PROJECT_DIR$/C.BNF" />
         <option value="$PROJECT_DIR$/include/lexer/Keyword.h" />
         <option value="$PROJECT_DIR$/include/lexer/Tag.h" />
-        <option value="$PROJECT_DIR$/include/praser/CPraser.h" />
+        <option value="$PROJECT_DIR$/src/lexer/Lexer.cpp" />
         <option value="$PROJECT_DIR$/src/praser/CPraser.cpp" />
-        <option value="$PROJECT_DIR$/C.BNF" />
       </list>
     </option>
   </component>
@@ -334,12 +336,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543838323722</updated>
-      <workItem from="1543838326419" duration="32084000" />
+      <workItem from="1543838326419" duration="34050000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32084000" />
+    <option name="totallyTimeSpent" value="34050000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -351,7 +353,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953104" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32953104" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32953104" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TeamCity" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -602,32 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lexer/Lexer.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-27">
-          <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="36" selection-end-line="29" selection-end-column="36" />
-          <folding>
-            <element signature="e#44#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/lexer/Keyword.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="37" column="58" lean-forward="false" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/include/lexer/Tag.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="52" column="49" lean-forward="false" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/praser/CPraser.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="398">
@@ -636,29 +612,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/C.BNF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="968">
+          <caret line="252" column="61" lean-forward="true" selection-start-line="252" selection-start-column="61" selection-end-line="252" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/praser/Praser.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
+        <state relative-caret-position="299">
           <caret line="49" column="24" lean-forward="false" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/praser/CPraser.cpp">
+    <entry file="file://$PROJECT_DIR$/include/lexer/Keyword.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="800">
-          <caret line="66" column="8" lean-forward="false" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
+        <state relative-caret-position="402">
+          <caret line="50" column="52" lean-forward="true" selection-start-line="50" selection-start-column="52" selection-end-line="50" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include/lexer/Tag.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="54" column="39" lean-forward="false" selection-start-line="54" selection-start-column="39" selection-end-line="54" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lexer/Lexer.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="38" column="40" lean-forward="false" selection-start-line="38" selection-start-column="40" selection-end-line="38" selection-end-column="40" />
           <folding>
-            <element signature="e#44#63#0" expanded="true" />
+            <element signature="e#44#82#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/C.BNF">
+    <entry file="file://$PROJECT_DIR$/src/praser/CPraser.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="266" column="13" lean-forward="true" selection-start-line="266" selection-start-column="13" selection-end-line="266" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="336">
+          <caret line="291" column="34" lean-forward="true" selection-start-line="291" selection-start-column="34" selection-end-line="291" selection-end-column="34" />
+          <folding>
+            <element signature="e#44#63#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
