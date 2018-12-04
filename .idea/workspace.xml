@@ -33,10 +33,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="437d38f2-d8a5-403f-8550-226ad932ecb7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/lexer/Keyword.h" afterPath="$PROJECT_DIR$/include/lexer/Keyword.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/include/lexer/Tag.h" afterPath="$PROJECT_DIR$/include/lexer/Tag.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lexer/Lexer.cpp" afterPath="$PROJECT_DIR$/src/lexer/Lexer.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/praser/CPraser.cpp" afterPath="$PROJECT_DIR$/src/praser/CPraser.cpp" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -72,8 +68,8 @@
       <file leaf-file-name="CPraser.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/praser/CPraser.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="291" column="34" lean-forward="true" selection-start-line="291" selection-start-column="34" selection-end-line="291" selection-end-column="34" />
+            <state relative-caret-position="367">
+              <caret line="447" column="23" lean-forward="false" selection-start-line="447" selection-start-column="23" selection-end-line="447" selection-end-column="23" />
               <folding>
                 <element signature="e#44#63#0" expanded="true" />
               </folding>
@@ -104,7 +100,7 @@
       <file leaf-file-name="Praser.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/praser/Praser.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
+            <state relative-caret-position="-3401">
               <caret line="49" column="24" lean-forward="false" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
               <folding />
             </state>
@@ -336,12 +332,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543838323722</updated>
-      <workItem from="1543838326419" duration="34050000" />
+      <workItem from="1543838326419" duration="35926000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34050000" />
+    <option name="totallyTimeSpent" value="35926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
@@ -620,14 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/praser/Praser.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="49" column="24" lean-forward="false" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/include/lexer/Keyword.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="402">
@@ -654,10 +642,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/praser/Praser.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3401">
+          <caret line="49" column="24" lean-forward="false" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/praser/CPraser.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="291" column="34" lean-forward="true" selection-start-line="291" selection-start-column="34" selection-end-line="291" selection-end-column="34" />
+        <state relative-caret-position="367">
+          <caret line="447" column="23" lean-forward="false" selection-start-line="447" selection-start-column="23" selection-end-line="447" selection-end-column="23" />
           <folding>
             <element signature="e#44#63#0" expanded="true" />
           </folding>

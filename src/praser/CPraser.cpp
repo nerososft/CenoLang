@@ -304,21 +304,39 @@ namespace CenoLang {
      * | enumerator_list ',' enumerator
      * ;
      */
-    void CPraser::enumerator_list();
+    void CPraser::enumerator_list(){
+        do{
+            enumerator();
+        }while(look->tag==',');
+        enumerator();
+    }
 
     /**
      * enumerator      : id
      * | id '=' const_exp
      * ;
      */
-    void CPraser::enumerator();
+    void CPraser::enumerator(){
+        match(Tag::ID);
+        if(look->tag=='='){ // id '=' const_exp
+            match('=');
+            const_exp();
+        }
+    }
 
     /**
      *  declarator      : pointer direct_declarator
      * |   direct_declarator
      * ;
      */
-    void CPraser::declarator();
+    void CPraser::declarator(){
+        if(look->tag=='*'){ // pointer direct_declarator
+            pointer();
+            direct_declarator();
+        }else{
+            direct_declarator();
+        }
+    }
 
     /**
      * direct_declarator   : id
@@ -330,7 +348,28 @@ namespace CenoLang {
      * | direct_declarator '('     ')'
      * ;
      */
-    void CPraser::direct_declarator();
+    void CPraser::direct_declarator(){
+        do{
+            direct_declarator();
+            switch (look->tag){
+                case '[':
+                    match('[');
+                    if(look->tag==Tag::NUM || look->tag==Tag::REAL){ // todo : CONSTANT
+                        const_exp();
+                    }
+                    match(']');
+                case '(':
+                    match('(');
+                    if(look->tag==Tag::ID){ // direct_declarator '(' id_list ')'
+                        id_list();
+                    }
+                    if(look->tag==Tag::BASIC_TYPE || look->tag==Tag::STORAGE_TYPE||look->tag==Tag::TYPE_QUALIFIER){ // direct_declarator '(' param_type_list ')'
+                        param_type_list();
+                    }
+                    match(')');
+            }
+        }while(look->tag!=Tag::ID || look->tag!='(');
+    }
 
     /**
      *  pointer         : '*' type_qualifier_list
@@ -339,28 +378,54 @@ namespace CenoLang {
      * | '*'           pointer
      * ;
      */
-    void CPraser::pointer();
+    void CPraser::pointer(){
+        do{
+            match('*');
+            if(look->tag==Tag::TYPE_QUALIFIER){
+                match(Tag::TYPE_QUALIFIER);
+                if(look->tag=='*'){
+                    pointer();  // todo ; may be bug
+                }
+            }
+        }while(look->tag!='*');
+    }
 
     /**
      *  type_qualifier_list : type_qualifier
      * | type_qualifier_list type_qualifier
      * ;
      */
-    void CPraser::type_qualifier_list();
+    void CPraser::type_qualifier_list(){
+        do{
+            type_qualifier();
+        }while(look->tag!=Tag::TYPE_QUALIFIER);
+    }
 
     /**
      * param_type_list     : param_list
      * | param_list ',' '...'
      * ;
      */
-    void CPraser::param_type_list();
+    void CPraser::param_type_list(){
+        param_list();
+        if(look->tag==','){ // param_list ',' '...'
+            match(',');
+            //match('...') // todo
+        }
+    }
 
     /**
      *  param_list      : param_decl
      * | param_list ',' param_decl
      * ;
      */
-    void CPraser::param_list();
+    void CPraser::param_list(){
+        param_decl();
+        while(look->tag==','){
+            match(',');
+            param_decl();
+        }
+    }
 
     /**
      *  param_decl      : decl_specs declarator
@@ -368,7 +433,10 @@ namespace CenoLang {
      * | decl_specs
      * ;
      */
-    void CPraser::param_decl();
+    void CPraser::param_decl(){
+        decl_specs();
+        // todo
+    }
 
 
     /**
@@ -376,7 +444,13 @@ namespace CenoLang {
      * | id_list ',' id
      * ;
      */
-    void CPraser::id_list();
+    void CPraser::id_list(){
+        match(Tag::ID);
+        while(look->tag==','){
+            match(',');
+            match(Tag::ID);
+        }
+    }
 
     /**
      * initializer     : assignment_exp
