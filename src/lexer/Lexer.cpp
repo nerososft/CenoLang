@@ -26,6 +26,7 @@ namespace  CenoLang {
 
         reserve(Keywords::IF); // if
         reserve(Keywords::ELSE); // else
+        reserve(Keywords::SWITCH); // switch
         reserve(Keywords::DO); // do
         reserve(Keywords::WHILE); // while
         reserve(Keywords::FOR); // for

@@ -393,7 +393,26 @@ namespace CenoLang {
      * | 'switch' '(' exp ')' stat
      * ;
      */
-    void CPraser::selection_stat();
+    void CPraser::selection_stat(){
+        switch (look->tag){
+            case Tag::IF: // 'if' '(' exp ')' stat
+                match(Tag::IF);
+                match('(');
+                exp();
+                match(')');
+                stat();
+                if(look->tag==Tag::ELSE){ // 'if' '(' exp ')' stat 'else' stat
+                    match(Tag::ELSE);
+                    stat();
+                }
+            case Tag::SWITCH: // 'switch' '(' exp ')' stat
+                match(Tag::SWITCH);
+                match('(');
+                exp();
+                match(')');
+                stat();
+        }
+    }
 
     /**
      * iteration_stat      : 'while' '(' exp ')' stat

@@ -47,6 +47,7 @@ namespace CenoLang {
         static const int GOTO = 23; // goto
 
         static const int FOR = 24; // for
+        static const int SWITCH = 25; // switch
 
     };
 }
