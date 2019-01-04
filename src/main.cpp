@@ -9,6 +9,9 @@
 
 int main() {
     CenoLang::Lexer *lexer = new CenoLang::Lexer();
+    while(true){
+        std::cout<<lexer->scan()->tag<<std::endl;
+    }
     CenoLang::CPraser *praser = new CenoLang::CPraser(lexer);
     praser->start();
 
